@@ -8,10 +8,10 @@
   "description": "Receives an array of functions, values or promises and returns a promise that resolves with the first of them that resolves.",
   "license": "Apache-2.0",
   "main": "index.js",
-  "homepage": "https://stash.redtonic/projects/NODE/repos/promisefallback",
+  "homepage": "https://github.com/softonic/promisefallback",
   "repository": {
     "type": "git",
-    "url": "ssh://git@stash.redtonic:7999/projects/NODE/repos/promisefallback.git"
+    "url": "git+https://github.com/softonic/promisefallback.git"
   },
   "files": [
     "es",
