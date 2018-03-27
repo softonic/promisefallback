@@ -14,10 +14,12 @@
  * @param  {Array} alternatives Array of functions, values or promises
  * @return {Promise}
  */
-function promiseFallback(alternatives) {
+function promiseFallback(alternatives, ...args) {
+  const origCtx = this;
   return alternatives.reduce((previous, current) => {
     return previous.catch(() => {
-      const value = typeof current === 'function' ? current() : current;
+      const value = typeof current === 'function' ?
+        current.apply(origCtx, args) : current;
       return Promise.resolve(value);
     });
   }, Promise.reject());
