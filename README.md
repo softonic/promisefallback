@@ -1,6 +1,9 @@
 # promisefallback
 
-Receives an array of functions, values or promises and returns a promise that resolves with the first of them that resolves.
+Receives an array of functions, values or promises and returns a promise
+that resolves with the first of them that resolves.
+The strategies are probed in series, i.e. a later function is invoked
+only after all prior strategies in the chain turned out as rejections.
 
 ## Installation
 
